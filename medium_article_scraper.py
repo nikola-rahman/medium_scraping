@@ -27,6 +27,7 @@ class MediumArticleScraper:
             raise Exception(self.url).with_traceback(e)
 
         self.data = pd.DataFrame(data)
+        return self.data
 
     def get_all_images(self):
         return self.article.find_all('figure')
